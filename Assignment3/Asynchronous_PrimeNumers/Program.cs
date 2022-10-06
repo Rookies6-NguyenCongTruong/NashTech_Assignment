@@ -4,12 +4,16 @@
     {
         public static void Main(String[] args)
         {
-            Task.WhenAny(
+            Console.WriteLine("List of prime numbers: ");
+
+            var task = Task.WhenAll(
                 GetPrimeNumbers(0, 100),
                 GetPrimeNumbers(100, 200)
             );
 
-            Console.WriteLine("Task done: ");
+            Task.WaitAll(task);
+
+            Console.WriteLine("Task done!!!!!!");
             Console.ReadKey();
         }
 

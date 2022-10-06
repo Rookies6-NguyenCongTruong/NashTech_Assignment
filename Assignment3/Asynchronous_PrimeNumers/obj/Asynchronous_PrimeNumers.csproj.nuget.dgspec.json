@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\Assignment3\\Asynchronous_PrimeNumers\\Asynchronous_PrimeNumers.csproj": {}
+    "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\Assignment3\\Asynchronous_PrimeNumers\\Asynchronous_PrimeNumers.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\Assignment3\\Asynchronous_PrimeNumers\\Asynchronous_PrimeNumers.csproj": {
+    "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\Assignment3\\Asynchronous_PrimeNumers\\Asynchronous_PrimeNumers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\Assignment3\\Asynchronous_PrimeNumers\\Asynchronous_PrimeNumers.csproj",
+        "projectUniqueName": "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\Assignment3\\Asynchronous_PrimeNumers\\Asynchronous_PrimeNumers.csproj",
         "projectName": "Asynchronous_PrimeNumers",
-        "projectPath": "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\Assignment3\\Asynchronous_PrimeNumers\\Asynchronous_PrimeNumers.csproj",
+        "projectPath": "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\Assignment3\\Asynchronous_PrimeNumers\\Asynchronous_PrimeNumers.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\Assignment3\\Asynchronous_PrimeNumers\\obj\\",
+        "outputPath": "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\Assignment3\\Asynchronous_PrimeNumers\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
