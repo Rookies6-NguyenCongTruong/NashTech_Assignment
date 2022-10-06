@@ -14,7 +14,6 @@ namespace DelegateEvent_Clock
             {
                 clockTickEvent(clock, eventArgs);
             }
-
         }
 
         public void Run()
