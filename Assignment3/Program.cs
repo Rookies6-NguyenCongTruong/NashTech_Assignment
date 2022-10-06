@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics;
 using System.Timers;
-using System;
 namespace Assignment3
 {
 
@@ -16,20 +15,18 @@ namespace Assignment3
 
     public class Program
     {
-        private static void Timer_Elapsed(object sender, ElapsedEventArgs e)
-        {
-            Console.WriteLine(DateTime.Now);
-        }
-
         public static void Main(String[] args)
         {
             var sw = new Stopwatch();
             sw.Start();
             var primes = GetPrimeNumbers(0, 100).Result;
 
-            foreach (var prime in primes)
+            if (primes.Any())
             {
-                Console.WriteLine(prime);
+                foreach (var prime in primes)
+                {
+                    Console.WriteLine(prime);
+                }
             }
 
             sw.Stop();
@@ -58,6 +55,7 @@ namespace Assignment3
                         list.Add(i);
                     }
                 }
+
                 return list;
             });
 
