@@ -24,8 +24,10 @@ public class LogginMiddleware
             RequestBody = body
         };
 
+        // Use StreamWriter to write data to file, it will also automatically create one if the file doesnt exist already
         using (StreamWriter writer = File.AppendText("file.txt"))
         {
+            // Convert requestdata to JSON string
             var data = JsonSerializer.Serialize(requestData);
 
             await writer.WriteLineAsync("================================================================");
