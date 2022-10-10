@@ -6,68 +6,69 @@ namespace AspNetCoreMVC_Assignment1.Controllers;
 public class RookiesController : Controller
 {
     private static List<PersonModel> _people = new List<PersonModel>()
+    {
+        new PersonModel()
         {
-            new PersonModel()
-            {
-                FirstName = "Nguyen Cong",
-                LastName = "Truong",
-                Gender = "Male",
-                DateOfBirth = new DateTime(2002, 07, 22),
-                PhoneNumber = "0123456789",
-                BirthPlace = "Ha Noi",
-                IsGraduated = true
+            FirstName = "Nguyen Cong",
+            LastName = "Truong",
+            Gender = "Male",
+            DateOfBirth = new DateTime(2002, 07, 22),
+            PhoneNumber = "0123456789",
+            BirthPlace = "Ha Noi",
+            IsGraduated = true
+        },
+        new PersonModel()
+        {
+            FirstName = "Nguyen Tien",
+            LastName = "Tai",
+            Gender = "Female",
+            DateOfBirth = new DateTime(2000, 02, 15),
+            PhoneNumber = "0123456789",
+            BirthPlace = "Ha Noi",
+            IsGraduated = false
+        },
+        new PersonModel()
+        {
+            FirstName = "Nguyen Van",
+            LastName = "Thao",
+            Gender = "Others",
+            DateOfBirth = new DateTime(2000, 10, 08),
+            PhoneNumber = "0123456789",
+            BirthPlace = "Ha Noi",
+            IsGraduated = true
             },
-            new PersonModel()
-            {
-                FirstName = "Nguyen Tien",
-                LastName = "Tai",
-                Gender = "Female",
-                DateOfBirth = new DateTime(2000, 02, 15),
-                PhoneNumber = "0123456789",
-                BirthPlace = "Ha Noi",
-                IsGraduated = false
-            },
-            new PersonModel()
-            {
-                FirstName = "Nguyen Van",
-                LastName = "Thao",
-                Gender = "Others",
-                DateOfBirth = new DateTime(2000, 10, 08),
-                PhoneNumber = "0123456789",
-                BirthPlace = "Ha Noi",
-                IsGraduated = true
-            },
-            new PersonModel()
-            {
-                FirstName = "Nguyen Duc",
-                LastName = "Vinh",
-                Gender = "Male",
-                DateOfBirth = new DateTime(2002, 08, 07),
-                PhoneNumber = "0123456789",
-                BirthPlace = "Ho Chi Minh",
-                IsGraduated = false
-            },
-            new PersonModel()
-            {
-                FirstName = "Do Tran",
-                LastName = "Minh",
-                Gender = "Female",
-                DateOfBirth = new DateTime(1998, 07, 22),
-                PhoneNumber = "0123456789",
-                BirthPlace = "Da Nang",
-                IsGraduated = true
-            },
-            new PersonModel()
-            {
-                FirstName = "Tran Thi",
-                LastName = "Thao",
-                Gender = "Female",
-                DateOfBirth = new DateTime(1998, 05, 17),
-                PhoneNumber = "0123456789",
-                BirthPlace = "Hai Phong",
-                IsGraduated = false
-            }
-        };
+        new PersonModel()
+        {
+            FirstName = "Nguyen Duc",
+            LastName = "Vinh",
+            Gender = "Male",
+            DateOfBirth = new DateTime(2002, 08, 07),
+            PhoneNumber = "0123456789",
+            BirthPlace = "Ho Chi Minh",
+            IsGraduated = false
+        },
+        new PersonModel()
+        {
+            FirstName = "Do Tran",
+            LastName = "Minh",
+            Gender = "Female",
+            DateOfBirth = new DateTime(1998, 07, 22),
+            PhoneNumber = "0123456789",
+            BirthPlace = "Da Nang",
+            IsGraduated = true
+        },
+        new PersonModel()
+        {
+            FirstName = "Tran Thi",
+            LastName = "Thao",
+            Gender = "Female",
+            DateOfBirth = new DateTime(1998, 05, 17),
+            PhoneNumber = "0123456789",
+            BirthPlace = "Hai Phong",
+            IsGraduated = false
+        }
+    };
+
     private readonly ILogger<RookiesController> _logger;
 
     public RookiesController(ILogger<RookiesController> logger)
