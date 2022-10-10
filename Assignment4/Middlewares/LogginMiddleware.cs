@@ -13,14 +13,15 @@ public class LogginMiddleware
     public async Task InvokeAsync(HttpContext context)
     {
         var stream = new StreamReader(context.Request.Body);
+        var dataContext = context.Request;
         var body = await stream.ReadToEndAsync();
 
         var requestData = new
         {
-            Schema = context.Request.Scheme,
-            Host = context.Request.Host.ToString(),
-            Path = context.Request.Path.ToString(),
-            QueryString = context.Request.QueryString.ToString(),
+            Schema = dataContext.Scheme,
+            Host = dataContext.Host.ToString(),
+            Path = dataContext.Path.ToString(),
+            QueryString = dataContext.QueryString.ToString(),
             RequestBody = body
         };
 
