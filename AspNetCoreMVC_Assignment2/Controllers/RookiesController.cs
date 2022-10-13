@@ -124,7 +124,6 @@ public class RookiesController : Controller
                 DateOfBirth = person.DateOfBirth,
                 PhoneNumber = person.PhoneNumber,
                 BirthPlace = person.BirthPlace,
-                Index = index
             };
             ViewData["Index"] = index;
             return View(model);
@@ -146,6 +145,8 @@ public class RookiesController : Controller
                 person.DateOfBirth = model.DateOfBirth;
                 person.PhoneNumber = model.PhoneNumber;
                 person.BirthPlace = model.BirthPlace;
+
+                _people[index] = person;
             }
 
             return RedirectToAction("Index");
