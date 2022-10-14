@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\AspNetCoreMVC_Assignment3\\AspNetCoreMVC_Assignment3.csproj": {}
+    "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\AspNetCoreWebAPI\\Assignment1\\Assignment1.csproj": {}
   },
   "projects": {
-    "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\AspNetCoreMVC_Assignment3\\AspNetCoreMVC_Assignment3.csproj": {
+    "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\AspNetCoreWebAPI\\Assignment1\\Assignment1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\AspNetCoreMVC_Assignment3\\AspNetCoreMVC_Assignment3.csproj",
-        "projectName": "AspNetCoreMVC_Assignment3",
-        "projectPath": "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\AspNetCoreMVC_Assignment3\\AspNetCoreMVC_Assignment3.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\AspNetCoreWebAPI\\Assignment1\\Assignment1.csproj",
+        "projectName": "Assignment1",
+        "projectPath": "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\AspNetCoreWebAPI\\Assignment1\\Assignment1.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\AspNetCoreMVC_Assignment3\\obj\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\AspNetCoreWebAPI\\Assignment1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
