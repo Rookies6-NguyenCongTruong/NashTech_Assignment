@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pLTe6CzYXyn+wmV3URmRKXTwhv1o5vGp4XhGCdhXo3Tw2KzSbjt15WoflGKmKA/hqXsEziu1y+BAmnMppMMksA==",
+  "dgSpecHash": "poZfGTcB59DN6emvAkC7b1PSalRSEys+HvVGVYxidgmyhIay2rWXEo+GTX75CcLODEAec8Y/90/R0SHAIwGV0w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\EFCore\\Assignment1\\Assignment1.csproj",
+  "projectFilePath": "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\EFCore\\Assignment1\\Assignment1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

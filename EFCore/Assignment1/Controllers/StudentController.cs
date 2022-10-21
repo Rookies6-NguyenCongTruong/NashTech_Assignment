@@ -9,11 +9,9 @@ namespace Assignment1.Controllers;
 public class StudentController : ControllerBase
 {
     private readonly IStudentService _service;
-    private readonly ILogger<StudentController> _logger;
 
-    public StudentController(ILogger<StudentController> logger, IStudentService service)
+    public StudentController(IStudentService service)
     {
-        _logger = logger;
         _service = service;
     }
 
