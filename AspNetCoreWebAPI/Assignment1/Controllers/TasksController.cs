@@ -15,7 +15,7 @@ public class TasksController : ControllerBase
         _service = service;
     }
 
-    [HttpGet]
+    [HttpGet("all")]
     public ActionResult<List<TaskModel>> GetAll()
     {
         try
@@ -139,7 +139,7 @@ public class TasksController : ControllerBase
 
                 await _service.Add(tasks);
 
-                return Accepted();
+                return Accepted(tasks);
             }
             catch (Exception ex)
             {
@@ -158,7 +158,7 @@ public class TasksController : ControllerBase
         {
             await _service.Delete(ids);
 
-            return Accepted();
+            return Accepted(ids);
         }
         catch (Exception ex)
         {
