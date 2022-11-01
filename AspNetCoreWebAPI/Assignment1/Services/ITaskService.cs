@@ -3,12 +3,12 @@ namespace Assignment1.Services;
 
 public interface ITaskService
 {
-    public List<TaskModel> GetAll();
-    public TaskModel? GetOne(Guid id);
-    public TaskModel Add(TaskModel task);
-    public TaskModel? Edit(TaskModel task);
-    public void Delete(Guid id);
-    public List<TaskModel> Add(List<TaskModel> tasks);
-    public void Delete(List<Guid> ids);
-    public bool Exist(Guid id);
+    List<TaskModel> GetAll();
+    TaskModel? GetOne(Guid id);
+    TaskModel Add(TaskModel task);
+    TaskModel? Edit(TaskModel task);
+    void Delete(Guid id);
+    Task Add(List<TaskModel> tasks);
+    Task Delete(List<Guid> ids);
+    bool Exist(Guid id);
 }

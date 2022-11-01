@@ -9,86 +9,160 @@ namespace Assignment1.Controllers;
 public class TasksController : ControllerBase
 {
     private readonly ITaskService _service;
-    private readonly ILogger<TasksController> _logger;
 
-    public TasksController(ILogger<TasksController> logger, ITaskService service)
+    public TasksController(ITaskService service)
     {
-        _logger = logger;
         _service = service;
     }
 
-    [HttpGet(Name = "GetListTasks")]
-    public List<TaskModel> GetAll()
+    [HttpGet]
+    public ActionResult<List<TaskModel>> GetAll()
     {
-        return _service.GetAll();
+        try
+        {
+            var model = _service.GetAll();
+
+            return Ok(model);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, ex);
+        }
+    }
+
+    [HttpGet("{id}")]
+    public ActionResult<TaskModel> GetOne(Guid id)
+    {
+        try
+        {
+            var model = _service.GetOne(id);
+
+            if (model != null)
+            {
+                return Ok(model);
+            }
+            return NotFound();
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, ex);
+        }
     }
 
     [HttpPost]
-    public TaskModel Add([FromBody] TaskModel model)
+    public ActionResult<TaskModel> Add([FromBody] TaskModel model)
     {
-        var task = new TaskModel
+        if (model != null)
         {
-            Id = Guid.NewGuid(),
-            Title = model.Title,
-            IsCompleted = model.IsCompleted
-        };
-        return _service.Add(task);
+            try
+            {
+                var task = new TaskModel
+                {
+                    Id = Guid.NewGuid(),
+                    Title = model.Title,
+                    IsCompleted = model.IsCompleted
+                };
+
+                return _service.Add(task);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex);
+            }
+        }
+        return BadRequest();
     }
 
-    [HttpPut]
+    [HttpPut("{id}")]
     public IActionResult Edit(Guid id, TaskModel model)
     {
         var task = _service.GetOne(id);
 
         if (task != null)
         {
-            task.Title = model.Title;
-            task.IsCompleted = model.IsCompleted;
+            try
+            {
+                task.Title = model.Title;
+                task.IsCompleted = model.IsCompleted;
 
-            var result = _service.Edit(task);
-            return new JsonResult(result);
+                var result = _service.Edit(task);
+                return new JsonResult(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex);
+            }
         }
 
         return NotFound();
     }
 
-    [HttpDelete]
+    [HttpDelete("{id}")]
     public IActionResult Delete(Guid id)
     {
         var task = _service.GetOne(id);
 
         if (task != null)
         {
-            _service.Delete(id);
-            return Ok();
+            try
+            {
+                _service.Delete(id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex);
+            }
         }
 
         return NotFound();
     }
 
     [HttpPost]
-    [Route("multiple-add")]
-    public List<TaskModel> AddMultiple(List<TaskModel> models)
+    [Route("multiple")]
+    public async Task<IActionResult> AddMultiple(List<TaskModel> models)
     {
-        var tasks = new List<TaskModel>();
-
-        foreach (var model in models)
+        if (models != null)
         {
-            tasks.Add(new TaskModel
+            var tasks = new List<TaskModel>();
+            try
             {
-                Id = Guid.NewGuid(),
-                Title = model.Title,
-                IsCompleted = model.IsCompleted
-            });
+                foreach (var model in models)
+                {
+                    tasks.Add(new TaskModel
+                    {
+                        Id = Guid.NewGuid(),
+                        Title = model.Title,
+                        IsCompleted = model.IsCompleted
+                    });
+                }
+
+                await _service.Add(tasks);
+
+                return Accepted();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex);
+            }
         }
-        return _service.Add(tasks);
+
+        return BadRequest();
     }
 
     [HttpPost]
-    [Route("multiple-delete")]
-    public IActionResult DeleteMultiple(List<Guid> ids)
+    [Route("multiple-deletion")]
+    public async Task<ActionResult> DeleteMultiple(List<Guid> ids)
     {
-        _service.Delete(ids);
-        return Ok();
+        try
+        {
+            await _service.Delete(ids);
+
+            return Accepted();
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, ex);
+        }
     }
 }

@@ -25,29 +25,34 @@ public class TaskService : ITaskService
         return task;
     }
 
-    public List<TaskModel> Add(List<TaskModel> tasks)
+    public Task Add(List<TaskModel> tasks)
     {
         _taskList.AddRange(tasks);
-        return tasks;
+
+        return Task.CompletedTask;
     }
 
     public void Delete(Guid id)
     {
         var result = _taskList.FirstOrDefault(d => d.Id == id);
+
         if (result != null)
         {
             _taskList.Remove(result);
         }
     }
 
-    public void Delete(List<Guid> ids)
+    public Task Delete(List<Guid> ids)
     {
         _taskList.RemoveAll(t => ids.Contains(t.Id));
+
+        return Task.CompletedTask;
     }
 
     public TaskModel? Edit(TaskModel task)
     {
         var result = _taskList.FirstOrDefault(t => t.Id == task.Id);
+
         if (result != null)
         {
             result.Title = task.Title;
