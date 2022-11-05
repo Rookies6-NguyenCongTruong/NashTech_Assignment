@@ -7,6 +7,6 @@ public interface ICategoryService
     AddCategoryResponse? Create(AddCategoryRequest createModel);
     IEnumerable<GetCategoryResponse> GetAll();
     GetCategoryResponse? GetById(int id);
-    UpdateCategoryResponse? Update(int id, UpdateCategoryRequest updateModel);
+    UpdateCategoryResponse? Update(UpdateCategoryRequest updateModel);
     bool Delete(int id);
 }

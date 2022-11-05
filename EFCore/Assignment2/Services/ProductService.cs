@@ -91,7 +91,7 @@ public class ProductService : IProductService
 
     public IEnumerable<GetProductResponse> GetAll()
     {
-        var list = _productRepository.GetAll(p => true).Select(product => new GetProductResponse
+        var list = _productRepository.GetAll().Select(product => new GetProductResponse
         {
             ProductId = product.Id,
             ProductName = product.ProductName,
@@ -120,13 +120,13 @@ public class ProductService : IProductService
         return null;
     }
 
-    public UpdateProductResponse? Update(int id, UpdateProductRequest updateModel)
+    public UpdateProductResponse? Update(UpdateProductRequest updateModel)
     {
         using (var transaction = _productRepository.DatabaseTransaction())
         {
             try
             {
-                var product = _productRepository.Get(p => p.Id == id);
+                var product = _productRepository.Get(p => p.Id == updateModel.Id);
 
                 if (product != null)
                 {

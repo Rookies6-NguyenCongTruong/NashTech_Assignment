@@ -33,10 +33,10 @@ public class CategoryController : ControllerBase
         return _categoryService.GetById(id);
     }
 
-    [HttpPut("{id}")]
-    public UpdateCategoryResponse? Update(int id, [FromBody] UpdateCategoryRequest updateCategoryRequest)
+    [HttpPut]
+    public UpdateCategoryResponse? Update([FromBody] UpdateCategoryRequest updateCategoryRequest)
     {
-        return _categoryService.Update(id, updateCategoryRequest);
+        return _categoryService.Update(updateCategoryRequest);
     }
 
     [HttpDelete("{id}")]
