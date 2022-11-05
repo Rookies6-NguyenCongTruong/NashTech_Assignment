@@ -98,7 +98,7 @@ public class RookiesControllerTest
         var result = _rookiesController.Create(mockModel);
 
         Assert.IsInstanceOf<RedirectToActionResult>(result);
-        Assert.That("Index", Is.EqualTo((result as RedirectToActionResult).ActionName));
+        Assert.That("Index", Is.EqualTo(((RedirectToActionResult)result).ActionName));
     }
 
     [Test]
@@ -108,7 +108,6 @@ public class RookiesControllerTest
         var message = "Model is invalid";
 
         _rookiesController.ModelState.AddModelError(key, message);
-        var model = new PersonCreateModel();
 
         var result = _rookiesController.Create();
 
@@ -149,7 +148,7 @@ public class RookiesControllerTest
         var result = _rookiesController.Details(index);
 
         Assert.IsInstanceOf<RedirectToActionResult>(result);
-        Assert.That("Index", Is.EqualTo((result as RedirectToActionResult).ActionName));
+        Assert.That("Index", Is.EqualTo(((RedirectToActionResult)result).ActionName));
     }
 
     [Test]
@@ -204,7 +203,7 @@ public class RookiesControllerTest
         var result = _rookiesController.Edit(index);
 
         Assert.IsInstanceOf<RedirectToActionResult>(result);
-        Assert.That("Index", Is.EqualTo((result as RedirectToActionResult).ActionName));
+        Assert.That("Index", Is.EqualTo(((RedirectToActionResult)result).ActionName));
     }
 
     [Test]
@@ -238,7 +237,7 @@ public class RookiesControllerTest
         var result = _rookiesController.Delete(index);
 
         Assert.IsInstanceOf<RedirectToActionResult>(result);
-        Assert.That("Index", Is.EqualTo((result as RedirectToActionResult).ActionName));
+        Assert.That("Index", Is.EqualTo(((RedirectToActionResult)result).ActionName));
     }
 
     [Test]
@@ -282,6 +281,6 @@ public class RookiesControllerTest
         var result = _rookiesController.DeleteRedirectToResultView(index);
 
         Assert.IsInstanceOf<RedirectToActionResult>(result);
-        Assert.That("DeleteResult", Is.EqualTo((result as RedirectToActionResult).ActionName));
+        Assert.That("DeleteResult", Is.EqualTo(((RedirectToActionResult)result).ActionName));
     }
 }
