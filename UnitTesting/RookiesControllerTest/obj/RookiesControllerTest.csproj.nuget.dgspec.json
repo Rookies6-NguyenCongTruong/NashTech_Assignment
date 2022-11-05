@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\RookiesControllerTest\\RookiesControllerTest.csproj": {}
+    "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\RookiesControllerTest\\RookiesControllerTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\AspNetCoreMVC_Assignment3\\AspNetCoreMVC_Assignment3.csproj": {
+    "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\AspNetCoreMVC_Assignment3\\AspNetCoreMVC_Assignment3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\AspNetCoreMVC_Assignment3\\AspNetCoreMVC_Assignment3.csproj",
+        "projectUniqueName": "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\AspNetCoreMVC_Assignment3\\AspNetCoreMVC_Assignment3.csproj",
         "projectName": "AspNetCoreMVC_Assignment3",
-        "projectPath": "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\AspNetCoreMVC_Assignment3\\AspNetCoreMVC_Assignment3.csproj",
+        "projectPath": "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\AspNetCoreMVC_Assignment3\\AspNetCoreMVC_Assignment3.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\AspNetCoreMVC_Assignment3\\obj\\",
+        "outputPath": "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\AspNetCoreMVC_Assignment3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -60,14 +60,14 @@
         }
       }
     },
-    "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\RookiesControllerTest\\RookiesControllerTest.csproj": {
+    "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\RookiesControllerTest\\RookiesControllerTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\RookiesControllerTest\\RookiesControllerTest.csproj",
+        "projectUniqueName": "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\RookiesControllerTest\\RookiesControllerTest.csproj",
         "projectName": "RookiesControllerTest",
-        "projectPath": "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\RookiesControllerTest\\RookiesControllerTest.csproj",
+        "projectPath": "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\RookiesControllerTest\\RookiesControllerTest.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\RookiesControllerTest\\obj\\",
+        "outputPath": "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\RookiesControllerTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -82,8 +82,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\AspNetCoreMVC_Assignment3\\AspNetCoreMVC_Assignment3.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\AspNetCoreMVC_Assignment3\\AspNetCoreMVC_Assignment3.csproj"
+              "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\AspNetCoreMVC_Assignment3\\AspNetCoreMVC_Assignment3.csproj": {
+                "projectPath": "c:\\Users\\PC\\Desktop\\NashTech_Assignment\\UnitTesting\\AspNetCoreMVC_Assignment3\\AspNetCoreMVC_Assignment3.csproj"
               }
             }
           }
